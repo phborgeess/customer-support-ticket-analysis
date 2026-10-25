@@ -1,0 +1,17 @@
+ticket_subject,issue_category
+Software bug,Product defect
+Hardware issue,Product defect
+Battery life,Product defect
+Display issue,Product defect
+Data loss,Product defect
+Network problem,Product defect
+Product compatibility,Usage & setup
+Peripheral compatibility,Usage & setup
+Installation support,Usage & setup
+Product setup,Usage & setup
+Product recommendation,Usage & setup
+Refund request,Service & billing
+Delivery problem,Service & billing
+Payment issue,Service & billing
+Account access,Service & billing
+Cancellation request,Service & billing
