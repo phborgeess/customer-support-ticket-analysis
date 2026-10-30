@@ -11,6 +11,7 @@ SELECT
 FROM dbo.tickets
 GROUP BY ticket_status
 ORDER BY tickets DESC;
+
 -- 2. Tickets by issue category, with % of all tickets
 SELECT
     issue_category,
@@ -35,5 +36,5 @@ SELECT
     COUNT(*) AS tickets,
     CAST(100.0 * COUNT(*) / (SELECT COUNT(*) FROM dbo.tickets) AS DECIMAL(5,1)) AS pct_of_total
 FROM dbo.tickets
-GROUP BY priority
-ORDER BY tickets DESC;
+GROUP BY priority, priority_order
+ORDER BY priority_order DESC;
