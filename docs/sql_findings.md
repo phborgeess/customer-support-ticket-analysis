@@ -34,6 +34,7 @@ Ticket **volume** is not a fair comparison: Canon EOS has the most tickets (240)
 
 - **Two in three tickets are unresolved: 67.3% backlog** (5,700 of 8,469).
 - **Priority barely matters:** Critical 65.9% vs. Low 68.8%. Marking a ticket as Critical does not seem to move it faster. *This is the most actionable finding for the Head of Support.*
+- **Complexity check:** there is no complexity field, so issue category serves as a rough proxy. Within each category, the Critical vs. Low gap stays small (Product defect 65.4% vs. 67.4%, Service & billing 67.3% vs. 72.5%, Usage & setup 65.1% vs. 66.7%), so problem type does not explain the priority result. Resource allocation cannot be tested, because there is no agent or team data.
 - Channel (66.4–67.8%) and issue category (66.6–68.7%) make almost no difference, so the backlog is a general problem.
 - By product the spread is wider: Nintendo Switch Pro Controller 75.9% vs. Microsoft Office 60.0%. A high backlog is a different problem from a high defect share; the Switch Pro Controller's defect share is a below-average 36.5%.
 
