@@ -1,0 +1,31 @@
+{
+  "name": "Ticket Support",
+  "dataColors": ["#1F4E79", "#A6A6A6", "#7F9FBF", "#C0392B", "#D9E6F2", "#5A5A5A"],
+  "background": "#FFFFFF",
+  "foreground": "#252423",
+  "tableAccent": "#1F4E79",
+  "good": "#1F4E79",
+  "neutral": "#A6A6A6",
+  "bad": "#C0392B",
+  "textClasses": {
+    "callout": { "fontSize": 28, "fontFace": "Segoe UI Semibold", "color": "#1F4E79" },
+    "title": { "fontSize": 12, "fontFace": "Segoe UI Semibold", "color": "#252423" },
+    "header": { "fontSize": 12, "fontFace": "Segoe UI Semibold", "color": "#252423" },
+    "label": { "fontSize": 10, "fontFace": "Segoe UI", "color": "#605E5C" }
+  },
+  "visualStyles": {
+    "*": {
+      "*": {
+        "background": [{ "show": true, "color": { "solid": { "color": "#FFFFFF" } }, "transparency": 0 }],
+        "border": [{ "show": true, "color": { "solid": { "color": "#E1E5EA" } }, "radius": 8 }],
+        "dropShadow": [{ "show": false }]
+      }
+    },
+    "page": {
+      "*": {
+        "background": [{ "color": { "solid": { "color": "#F3F5F8" } }, "transparency": 0 }],
+        "outspace": [{ "color": { "solid": { "color": "#E9ECF1" } } }]
+      }
+    }
+  }
+}
