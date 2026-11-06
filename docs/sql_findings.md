@@ -55,6 +55,9 @@ It is the input for the Power BI dashboard (Stage 4).
 
 ## What goes to Stage 3
 
+**Answered in [stats_findings.md](stats_findings.md):** Samsung Galaxy is real (adjusted p = 0.019); there is no evidence that priority changes the backlog (p = 0.10); there is no evidence that satisfaction differs by product or channel.
+
+
 1. Is Samsung Galaxy's 49.5% defect share significantly above the rest, or just chance?
 2. Is the Critical vs. Low backlog gap (65.9% vs. 68.8%) real?
 3. Do product CSAT differences survive a significance test, given 47–83 ratings per product?
