@@ -1,0 +1,67 @@
+table vw_product_scorecard
+	lineageTag: 0ad48635-6065-4e56-9423-155be1071eee
+
+	column product
+		dataType: string
+		lineageTag: b8168a4d-de22-43ff-a5f0-717894f00a14
+		summarizeBy: none
+		sourceColumn: product
+
+	column total_tickets
+		dataType: int64
+		formatString: #,0
+		lineageTag: 5a844ddb-6195-4879-b9ba-57cce834b89d
+		summarizeBy: none
+		sourceColumn: total_tickets
+
+	column defect_tickets
+		dataType: int64
+		formatString: #,0
+		lineageTag: 7e0dc5bf-6d20-4b74-a8c3-536768285821
+		summarizeBy: none
+		sourceColumn: defect_tickets
+
+	column defect_pct
+		dataType: double
+		formatString: 0.0
+		lineageTag: 7fbd9f00-27e8-4f98-a341-cd42df13eb4e
+		summarizeBy: none
+		sourceColumn: defect_pct
+
+	column backlog_pct
+		dataType: double
+		formatString: 0.0
+		lineageTag: 96f5d5ce-c024-48ce-96e6-129fd2fc368b
+		summarizeBy: none
+		sourceColumn: backlog_pct
+
+	column closed_tickets
+		dataType: int64
+		formatString: #,0
+		lineageTag: 1aa4af8d-55c8-4173-8a57-2b340c7a62a5
+		summarizeBy: none
+		sourceColumn: closed_tickets
+
+	column avg_csat
+		dataType: double
+		formatString: 0.00
+		lineageTag: 8bdff4a7-972d-4758-96e5-12d5fc08f0cd
+		summarizeBy: none
+		sourceColumn: avg_csat
+
+	column defect_rank
+		dataType: int64
+		formatString: 0
+		lineageTag: 5543677a-3d74-4524-b768-488f1e90c637
+		summarizeBy: none
+		sourceColumn: defect_rank
+
+	partition vw_product_scorecard = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Database("localhost", "TicketSupport"),
+				    Data = Source{[Schema="dbo",Item="vw_product_scorecard"]}[Data]
+				in
+				    Data
+

@@ -1,0 +1,141 @@
+table tickets
+	lineageTag: 5da24523-1954-4e34-9c40-6ab5bfcd3c3d
+
+	column ticket_id
+		dataType: int64
+		formatString: 0
+		lineageTag: ff4d354c-d91a-419f-b8e3-30680e504d1b
+		summarizeBy: sum
+		sourceColumn: ticket_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column customer_age
+		dataType: int64
+		formatString: 0
+		lineageTag: 7d5b79ef-4b16-4bba-b6d2-094b2764777b
+		summarizeBy: sum
+		sourceColumn: customer_age
+
+		annotation SummarizationSetBy = Automatic
+
+	column customer_gender
+		dataType: string
+		lineageTag: 828205c8-dac6-4635-ad73-7fc1e3470f59
+		summarizeBy: none
+		sourceColumn: customer_gender
+
+	column product
+		dataType: string
+		lineageTag: 9e23f50d-3b29-4fc4-920e-0862007b7452
+		summarizeBy: none
+		sourceColumn: product
+
+	column purchase_date
+		dataType: dateTime
+		formatString: yyyy-mm-dd
+		lineageTag: 25039a87-e66f-44cd-8d25-4d9331c3d020
+		summarizeBy: none
+		sourceColumn: purchase_date
+
+		variation Variation
+			isDefault
+			relationship: 62372df3-d1e7-404b-948f-b32c9834026d
+			defaultHierarchy: LocalDateTable_cbf91fb7-94b7-4485-ae9b-06c7dc36ffc0.'Date Hierarchy'
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column ticket_type
+		dataType: string
+		lineageTag: 640cef4e-cf9b-408d-9563-a9e3a13c3ce6
+		summarizeBy: none
+		sourceColumn: ticket_type
+
+	column ticket_subject
+		dataType: string
+		lineageTag: 9ddf2d17-5bef-4ea8-85a8-9311e4bc9b0a
+		summarizeBy: none
+		sourceColumn: ticket_subject
+
+	column ticket_status
+		dataType: string
+		lineageTag: d55b374f-8805-4700-a45d-43832b842d6f
+		summarizeBy: none
+		sourceColumn: ticket_status
+
+	column priority
+		dataType: string
+		lineageTag: 47437f04-1633-44c6-bf38-a323c4836c7a
+		summarizeBy: none
+		sourceColumn: priority
+		sortByColumn: priority_order
+
+	column channel
+		dataType: string
+		lineageTag: 5c44db45-fc62-497b-9f8e-bb972d43bcd1
+		summarizeBy: none
+		sourceColumn: channel
+
+	column first_response_at
+		dataType: dateTime
+		formatString: yyyy-mm-dd hh:nn:ss
+		lineageTag: 407069f1-25ec-4c1f-bcb0-89d82b398c9c
+		summarizeBy: none
+		sourceColumn: first_response_at
+
+		variation Variation
+			isDefault
+			relationship: 07ca91de-0e7e-47d1-a208-6621a9aa7997
+			defaultHierarchy: LocalDateTable_1b59c913-b967-4382-b735-3aa9ad365ddb.'Date Hierarchy'
+
+	column resolved_at
+		dataType: dateTime
+		formatString: yyyy-mm-dd hh:nn:ss
+		lineageTag: 783ed5e9-8a20-48c1-a7b8-6a2b37b0fea4
+		summarizeBy: none
+		sourceColumn: resolved_at
+
+		variation Variation
+			isDefault
+			relationship: 8dc26fe9-91ef-4fcc-87cf-3b5fabad44e6
+			defaultHierarchy: LocalDateTable_4689d9cb-d7ae-499f-9b86-b1a63b0bb89a.'Date Hierarchy'
+
+	column csat
+		dataType: int64
+		formatString: 0
+		lineageTag: 557db795-b25a-4562-8211-9b4bae4a8fdb
+		summarizeBy: sum
+		sourceColumn: csat
+
+		annotation SummarizationSetBy = Automatic
+
+	column age_group
+		dataType: string
+		lineageTag: 8a06132c-0bc6-45d6-bb65-dbda36cb43ce
+		summarizeBy: none
+		sourceColumn: age_group
+
+	column priority_order
+		dataType: int64
+		formatString: 0
+		lineageTag: c72f8c6f-44d4-439f-bfbc-e029e5974a34
+		summarizeBy: sum
+		sourceColumn: priority_order
+
+		annotation SummarizationSetBy = Automatic
+
+	column issue_category
+		dataType: string
+		lineageTag: e6915722-dd1b-4627-858b-9dbe9a2debec
+		summarizeBy: none
+		sourceColumn: issue_category
+
+	partition tickets = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Database("localhost", "TicketSupport"),
+				    Data = Source{[Schema="dbo",Item="tickets"]}[Data]
+				in
+				    Data
+

@@ -1,0 +1,39 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
+  "name": "ov_card_total",
+  "position": {
+    "x": 36,
+    "y": 136,
+    "z": 6000,
+    "height": 160,
+    "width": 444,
+    "tabOrder": 6000
+  },
+  "visual": {
+    "visualType": "cardVisual",
+    "query": {
+      "queryState": {
+        "Data": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "Total Tickets Label"
+                }
+              },
+              "queryRef": "_Measures.Total Tickets Label",
+              "nativeQueryRef": "Total Tickets Label",
+              "displayName": "Total tickets"
+            }
+          ]
+        }
+      }
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

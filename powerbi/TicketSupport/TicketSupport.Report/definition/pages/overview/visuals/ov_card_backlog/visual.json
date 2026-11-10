@@ -1,0 +1,39 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
+  "name": "ov_card_backlog",
+  "position": {
+    "x": 504,
+    "y": 136,
+    "z": 7000,
+    "height": 160,
+    "width": 444,
+    "tabOrder": 7000
+  },
+  "visual": {
+    "visualType": "cardVisual",
+    "query": {
+      "queryState": {
+        "Data": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "Backlog %"
+                }
+              },
+              "queryRef": "_Measures.Backlog %",
+              "nativeQueryRef": "Backlog %",
+              "displayName": "Unresolved (backlog)"
+            }
+          ]
+        }
+      }
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

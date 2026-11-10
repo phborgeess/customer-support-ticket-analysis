@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "TicketSupport"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "379df0f7-a022-45df-acc8-a9498e4f8ca9"
+  }
+}

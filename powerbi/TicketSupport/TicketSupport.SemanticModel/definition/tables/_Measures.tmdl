@@ -1,0 +1,57 @@
+table _Measures
+	lineageTag: 42ae6dae-92ea-4ded-82f9-8fe31c8c5c08
+
+	measure 'Total Tickets' = COUNTROWS(tickets)
+		formatString: #,0
+		lineageTag: 0b5f8698-8676-48a2-a138-b9967fd0a092
+
+	measure 'Total Tickets Label' = FORMAT([Total Tickets], "#,0")
+		lineageTag: 1ff430b3-8fdb-4b85-97bd-8aa349ec08c6
+
+	measure 'Backlog Tickets' = CALCULATE([Total Tickets], tickets[ticket_status] IN {"Open", "Pending Customer Response"})
+		formatString: #,0
+		lineageTag: 40268d2d-8a03-4079-aa08-5c44e300b01e
+
+	measure 'Backlog %' = DIVIDE([Backlog Tickets], [Total Tickets])
+		formatString: 0.0%
+		lineageTag: a3df18ee-8843-44af-8ea2-11e9a266a355
+
+	measure 'Defect Tickets' = CALCULATE([Total Tickets], tickets[issue_category] = "Product defect")
+		formatString: #,0
+		lineageTag: 0335a6e8-0a35-4e23-88c8-8d6fe1f42ec3
+
+	measure 'Defect %' = DIVIDE([Defect Tickets], [Total Tickets])
+		formatString: 0.0%
+		lineageTag: f1e89a96-786e-4019-ba5b-7f81a3b163dc
+
+	measure 'Avg CSAT' = AVERAGE(tickets[csat])
+		formatString: 0.00
+		lineageTag: cbf16344-dc18-4eec-acf6-1c80bbe71f5a
+
+	measure 'Rated Tickets' = COUNT(tickets[csat])
+		formatString: #,0
+		lineageTag: a7e57345-c5a4-4de2-87fa-e220a0edb664
+
+	measure 'Overall Defect %' = CALCULATE([Defect %], REMOVEFILTERS(tickets))
+		formatString: 0.0%
+		lineageTag: f49599b3-e179-4be9-8527-73aa1ed5ce68
+
+	measure 'Overall Backlog %' = CALCULATE([Backlog %], REMOVEFILTERS(tickets))
+		formatString: 0.0%
+		lineageTag: a21e4176-a825-4a37-bdd9-720b6bda882a
+
+	column Dummy
+		dataType: string
+		isHidden
+		lineageTag: 645276f6-f080-47f5-ac1a-1149b3f00617
+		summarizeBy: none
+		sourceColumn: Dummy
+
+	partition _Measures = m
+		mode: import
+		source =
+				let
+				    Source = #table(type table [Dummy = text], {})
+				in
+				    Source
+

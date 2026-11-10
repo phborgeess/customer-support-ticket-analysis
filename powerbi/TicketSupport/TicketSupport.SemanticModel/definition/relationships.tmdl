@@ -1,0 +1,19 @@
+relationship a2b321ce-e0bc-4554-b590-75e4ac429416
+	fromColumn: tickets.product
+	toColumn: vw_product_scorecard.product
+
+relationship 62372df3-d1e7-404b-948f-b32c9834026d
+	joinOnDateBehavior: datePartOnly
+	fromColumn: tickets.purchase_date
+	toColumn: LocalDateTable_cbf91fb7-94b7-4485-ae9b-06c7dc36ffc0.Date
+
+relationship 07ca91de-0e7e-47d1-a208-6621a9aa7997
+	joinOnDateBehavior: datePartOnly
+	fromColumn: tickets.first_response_at
+	toColumn: LocalDateTable_1b59c913-b967-4382-b735-3aa9ad365ddb.Date
+
+relationship 8dc26fe9-91ef-4fcc-87cf-3b5fabad44e6
+	joinOnDateBehavior: datePartOnly
+	fromColumn: tickets.resolved_at
+	toColumn: LocalDateTable_4689d9cb-d7ae-499f-9b86-b1a63b0bb89a.Date
+

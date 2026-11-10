@@ -1,0 +1,239 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
+  "name": "pr_table",
+  "position": {
+    "x": 972,
+    "y": 136,
+    "z": 13000,
+    "height": 712,
+    "width": 912,
+    "tabOrder": 13000
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "vw_product_scorecard"
+                    }
+                  },
+                  "Property": "product"
+                }
+              },
+              "queryRef": "vw_product_scorecard.product",
+              "nativeQueryRef": "product",
+              "displayName": "Product"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "vw_product_scorecard"
+                    }
+                  },
+                  "Property": "total_tickets"
+                }
+              },
+              "queryRef": "vw_product_scorecard.total_tickets",
+              "nativeQueryRef": "total_tickets",
+              "displayName": "Tickets"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "vw_product_scorecard"
+                    }
+                  },
+                  "Property": "defect_pct"
+                }
+              },
+              "queryRef": "vw_product_scorecard.defect_pct",
+              "nativeQueryRef": "defect_pct",
+              "displayName": "Defect %"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "vw_product_scorecard"
+                    }
+                  },
+                  "Property": "backlog_pct"
+                }
+              },
+              "queryRef": "vw_product_scorecard.backlog_pct",
+              "nativeQueryRef": "backlog_pct",
+              "displayName": "Backlog %"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "vw_product_scorecard"
+                    }
+                  },
+                  "Property": "avg_csat"
+                }
+              },
+              "queryRef": "vw_product_scorecard.avg_csat",
+              "nativeQueryRef": "avg_csat",
+              "displayName": "Avg CSAT"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "vw_product_scorecard"
+                    }
+                  },
+                  "Property": "defect_rank"
+                }
+              },
+              "queryRef": "vw_product_scorecard.defect_rank",
+              "nativeQueryRef": "defect_rank",
+              "displayName": "Rank"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "vw_product_scorecard"
+                  }
+                },
+                "Property": "defect_rank"
+              }
+            },
+            "direction": "Ascending"
+          }
+        ]
+      }
+    },
+    "objects": {
+      "values": [
+        {
+          "properties": {
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "13D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "columnHeaders": [
+        {
+          "properties": {
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "13D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "total": [
+        {
+          "properties": {
+            "totals": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Product scorecard (sorted by defect rank)'"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "16D"
+                }
+              }
+            },
+            "bold": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#252423'"
+                    }
+                  }
+                }
+              }
+            },
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'left'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "subTitle": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}
