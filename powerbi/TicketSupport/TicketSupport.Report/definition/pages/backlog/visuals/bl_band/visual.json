@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
-  "name": "bl_subtitle",
+  "name": "bl_band",
   "position": {
-    "x": 36,
-    "y": 76,
-    "z": 20000,
-    "height": 36,
-    "width": 1200,
-    "tabOrder": 20000
+    "x": 0,
+    "y": 0,
+    "z": 21000,
+    "height": 120,
+    "width": 1920,
+    "tabOrder": 21000
   },
   "visual": {
     "visualType": "textbox",
@@ -19,10 +19,10 @@
               {
                 "textRuns": [
                   {
-                    "value": "Backlog = tickets still Open or Pending Customer Response  ·  all tickets: 67.3%",
+                    "value": " ",
                     "textStyle": {
-                      "fontSize": "12pt",
-                      "color": "#605E5C"
+                      "fontSize": "8pt",
+                      "color": "#1D3557"
                     }
                   }
                 ]
@@ -40,7 +40,25 @@
             "show": {
               "expr": {
                 "Literal": {
-                  "Value": "false"
+                  "Value": "true"
+                }
+              }
+            },
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#1D3557'"
+                    }
+                  }
+                }
+              }
+            },
+            "transparency": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
                 }
               }
             }
@@ -54,6 +72,24 @@
               "expr": {
                 "Literal": {
                   "Value": "false"
+                }
+              }
+            },
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#1D3557'"
+                    }
+                  }
+                }
+              }
+            },
+            "radius": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
                 }
               }
             }

@@ -3,11 +3,11 @@
   "name": "pr_title",
   "position": {
     "x": 36,
-    "y": 20,
-    "z": 14000,
-    "height": 56,
+    "y": 14,
+    "z": 16000,
+    "height": 96,
     "width": 1200,
-    "tabOrder": 14000
+    "tabOrder": 16000
   },
   "visual": {
     "visualType": "textbox",
@@ -21,9 +21,20 @@
                   {
                     "value": "Products: where do defects come from?",
                     "textStyle": {
-                      "fontSize": "24pt",
-                      "color": "#252423",
+                      "fontSize": "26pt",
+                      "color": "#FFFFFF",
                       "fontWeight": "bold"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Share of each product's tickets that are product defects  ·  average across all products: 37.4%",
+                    "textStyle": {
+                      "fontSize": "13pt",
+                      "color": "#C9D6E8"
                     }
                   }
                 ]
@@ -55,6 +66,24 @@
               "expr": {
                 "Literal": {
                   "Value": "false"
+                }
+              }
+            },
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#FFFFFF'"
+                    }
+                  }
+                }
+              }
+            },
+            "radius": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
                 }
               }
             }

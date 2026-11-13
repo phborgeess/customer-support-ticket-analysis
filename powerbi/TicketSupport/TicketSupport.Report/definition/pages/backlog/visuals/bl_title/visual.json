@@ -3,11 +3,11 @@
   "name": "bl_title",
   "position": {
     "x": 36,
-    "y": 20,
-    "z": 19000,
-    "height": 56,
+    "y": 14,
+    "z": 22000,
+    "height": 96,
     "width": 1200,
-    "tabOrder": 19000
+    "tabOrder": 22000
   },
   "visual": {
     "visualType": "textbox",
@@ -21,9 +21,20 @@
                   {
                     "value": "Backlog & Priority: are critical tickets moving?",
                     "textStyle": {
-                      "fontSize": "24pt",
-                      "color": "#252423",
+                      "fontSize": "26pt",
+                      "color": "#FFFFFF",
                       "fontWeight": "bold"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Backlog = tickets still Open or Pending Customer Response  ·  all tickets: 67.3%",
+                    "textStyle": {
+                      "fontSize": "13pt",
+                      "color": "#C9D6E8"
                     }
                   }
                 ]
@@ -55,6 +66,24 @@
               "expr": {
                 "Literal": {
                   "Value": "false"
+                }
+              }
+            },
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#FFFFFF'"
+                    }
+                  }
+                }
+              }
+            },
+            "radius": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
                 }
               }
             }
