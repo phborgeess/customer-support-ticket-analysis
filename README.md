@@ -10,7 +10,7 @@ A Head of Customer Support at a fictional electronics retailer asks:
 
 > *Which products are causing the most problems for support, is it the product's fault or our service, and are tickets being handled in the right order?*
 
-The data is a public, synthetic Kaggle dataset of customer support tickets. Treating it as a real request shapes every step. The analysis starts from the stakeholder's question rather than from the columns, every finding is tested before it is reported, and the project ends with a recommendation instead of a chart.
+The data is the public, synthetic [Customer Support Ticket Dataset](https://www.kaggle.com/datasets/suraj520/customer-support-ticket-dataset) from Kaggle. Treating it as a real request shapes every step. The analysis starts from the stakeholder's question rather than from the columns, every finding is tested before it is reported, and the project ends with a recommendation instead of a chart.
 
 ## Key findings
 

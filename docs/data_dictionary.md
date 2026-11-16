@@ -1,6 +1,6 @@
 # Data Dictionary — `data/clean/tickets_clean.csv`
 
-8,469 rows, one per support ticket. UTF-8, comma-separated. Empty cells are nulls.
+8,469 rows, one per support ticket. UTF-8, comma-separated. Empty cells are nulls. Source: [Customer Support Ticket Dataset](https://www.kaggle.com/datasets/suraj520/customer-support-ticket-dataset) (Kaggle).
 Produced by the Power Query query `tickets_clean` in `excel/ticket_analysis.xlsx`; every step is explained in [data_quality_log.md](data_quality_log.md).
 
 | Column | Type | Description | Example | Nulls |
