@@ -1,4 +1,4 @@
-# Final LinkedIn post (Stages 5 + 6) — draft
+# Final LinkedIn post (Stages 5 + 6) — published
 
 **Images:** `images/stage4_overview.png` (main), slide 6 of `reports/executive_summary.pdf` (recommendations)
 **Repository:** https://github.com/phborgeess/customer-support-ticket-analysis
@@ -17,10 +17,16 @@ What the data says, in three lines: Samsung Galaxy is the one product with a rea
 
 What I'm taking from it: the hardest and most valuable part wasn't any tool. It was deciding what not to say. Leaving out speed because the timestamps were broken, and dropping two "problem products" because the stats didn't back them up.
 
-The repo has everything: the cleaning log, the SQL scripts, the notebook, the Power BI project and the slides.
+The full project, step by step through the whole life cycle, is in the Projects section of my LinkedIn profile and in my GitHub repository:
 
 https://github.com/phborgeess/customer-support-ticket-analysis
 
-Thanks to everyone who commented along the way, the questions made the project better. If you work with data, I'd love to hear what you'd have done differently.
+It was a challenging one, because I had to play two roles. I was the data analyst bringing the answers, and I was also the manager asking the questions and wanting results I could actually see and use. Switching between those two hats taught me a lot about what a stakeholder really needs from an analysis.
+
+I'm happy to call it done, and proud that along the way I solved my own bugs and broken queries.
+
+Thank you to everyone who commented, sent me a DM or simply left a like on the posts about this project. It means a lot to me.
+
+I'm currently looking for Data Analyst and BI Analyst roles in Ireland. If your team is hiring, or you know someone who is, I'd love to connect.
 
 #DataAnalytics #SQL #Python #PowerBI #LearningInPublic
