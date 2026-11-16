@@ -1,7 +1,7 @@
 # Final LinkedIn post (Stages 5 + 6) — draft
 
 **Images:** `images/stage4_overview.png` (main), slide 6 of `reports/executive_summary.pdf` (recommendations)
-**Before posting:** replace GITHUB_LINK with the repository URL.
+**Repository:** https://github.com/phborgeess/customer-support-ticket-analysis
 
 ---
 
@@ -19,7 +19,7 @@ What I'm taking from it: the hardest and most valuable part wasn't any tool. It 
 
 The repo has everything: the cleaning log, the SQL scripts, the notebook, the Power BI project and the slides.
 
-GITHUB_LINK
+https://github.com/phborgeess/customer-support-ticket-analysis
 
 Thanks to everyone who commented along the way, the questions made the project better. If you work with data, I'd love to hear what you'd have done differently.
 
